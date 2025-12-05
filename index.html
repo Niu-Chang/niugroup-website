@@ -1,31 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Research Group</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.6; }
-    nav a { margin-right: 15px; }
-    h1 { color: #003d7c; }
-  </style>
+<meta charset="UTF-8">
+<title>Your Research Group</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* --------- GLOBAL STYLES --------- */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #222;
+  background: #fafafa;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* --------- NAV BAR --------- */
+
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #004b8d;
+}
+
+nav a {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+nav a:hover {
+  color: #0072ce;
+}
+
+/* --------- HERO SECTION --------- */
+
+.hero {
+  background: linear-gradient(135deg, #004b8d, #0072ce);
+  padding: 4rem 1rem;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0.5rem auto 1.5rem;
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: white;
+  color: #004b8d;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.cta-button:hover {
+  background: #f2f2f2;
+}
+
+/* --------- MAIN CONTENT --------- */
+
+.section {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+.section h2 {
+  color: #004b8d;
+  margin-bottom: 1rem;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #004b8d;
+}
+
+/* NEWS LIST */
+
+.news-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.news-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  margin-bottom: 0.8rem;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+</style>
 </head>
+
 <body>
-  <h1>My Research Group</h1>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="members.html">Members</a>
-    <a href="publications.html">Publications</a>
-    <a href="news.html">News</a>
-    <a href="contact.html">Photos</a>
-  </nav>
+<!-- NAVIGATION -->
+<header>
+  <div class="nav-container">
+    <div class="logo">Your Research Group</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+      <a href="photos.html">Photos</a>
+    </nav>
+  </div>
+</header>
 
-  <h2>Welcome</h2>
+<!-- HERO -->
+<section class="hero">
+  <h1>Welcome to the Your Research Group</h1>
   <p>
-    This is the official website of our research group.  
-    Here we share our members, latest news, publications, and photos.
+    We are a research group at the Department of XXX, YYY University.  
+    Our work explores advanced materials, devices, and cutting-edge physics  
+    to build next-generation electronic technologies.
   </p>
+  <a class="cta-button" href="members.html">Meet the Team →</a>
+</section>
+
+<!-- RESEARCH + NEWS -->
+<div class="section">
+  <h2>Research Highlights</h2>
+  <div class="cards">
+
+    <div class="card">
+      <h3>Device Physics</h3>
+      <p>
+        We investigate low-dimensional semiconductors, electronic transport,  
+        and quantum effects toward high-performance electronics.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Materials Engineering</h3>
+      <p>
+        Thin films, ALD processes, 2D materials, and high-mobility oxide channels  
+        for next-generation integration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Monolithic Integration</h3>
+      <p>
+        Advanced device stacking, BEOL-compatible technologies,  
+        and reliable architectures for future chip design.
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<!-- NEWS -->
+<div class="section">
+  <h2>Latest News</h2>
+  <ul class="news-list">
+
+    <li class="news-item">
+      <div class="news-date">2025-12-01</div>
+      Our paper on **InOx TFT reliability** has been accepted to *Nature Electronics*.
+    </li>
+
+    <li class="news-item">
+      <div class="news-date">2025-11-10</div>
+      We welcome **Student Name** as the newest PhD researcher in the group.
+    </li>
+
+    <li class="news-item">
+      <div class="news-date">2025-10-05</div>
+      Our group presented **two invited talks** at the IEEE IEDM conference.
+    </li>
+
+  </ul>
+
+  <p><a href="news.html" style="color:#004b8d; font-weight:bold;">View all news →</a></p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 Your Research Group · YYY University  
+</footer>
 
 </body>
 </html>
