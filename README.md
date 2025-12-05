@@ -1,2 +1,2 @@
 # niugroup-website
-Niu's group @
+Niu Chang's group @
