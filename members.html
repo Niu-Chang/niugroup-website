@@ -1,30 +1,270 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Members</title>
+  <title>Members | Your Research Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header / Nav – same as other pages */
+    header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #004b8d;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.98rem;
+    }
+
+    nav a:hover {
+      color: #0072ce;
+    }
+
+    /* Layout */
+    .section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem 2rem;
+    }
+
+    h1, h2 {
+      color: #004b8d;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #004b8d;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Member cards */
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .member-card {
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1rem 1.2rem;
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      font-size: 0.95rem;
+    }
+
+    .member-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      background: #ddd;
+    }
+
+    .member-info {
+      flex: 1;
+    }
+
+    .member-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #004b8d;
+      margin-bottom: 0.1rem;
+    }
+
+    .member-role {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 0.25rem;
+    }
+
+    .member-email a {
+      font-size: 0.88rem;
+      color: #0072ce;
+      text-decoration: none;
+    }
+
+    .member-email a:hover {
+      text-decoration: underline;
+    }
+
+    .member-intro {
+      margin-top: 0.3rem;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Alumni list */
+    .alumni-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.92rem;
+    }
+
+    .alumni-list li {
+      margin-bottom: 0.35rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
+
 <body>
+
+<!-- HEADER / NAV -->
+<header>
+  <div class="nav-container">
+    <div class="logo">Your Research Group</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="section">
   <h1>Group Members</h1>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="members.html">Members</a>
-    <a href="publications.html">Publications</a>
-    <a href="news.html">News</a>
-    <a href="photos.html">Photos</a>
-  </nav>
 
+  <!-- PI -->
   <h2>Principal Investigator</h2>
-  <ul>
-    <li>Your Name – Assistant Professor (your email)</li>
+  <div class="member-grid">
+    <div class="member-card">
+      <img class="member-photo" src="assets/img/pi.jpg" alt="PI photo">
+      <div class="member-info">
+        <div class="member-name">Dr. Your Name</div>
+        <div class="member-role">
+          Assistant Professor<br>
+          Department of XXX, YYY University
+        </div>
+        <div class="member-email">
+          <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+        </div>
+        <div class="member-intro">
+          Dr. Your Name’s research focuses on quantum electronics, oxide semiconductors,
+          and nanoscale device physics, with an emphasis on transport, localization,
+          and monolithic integration for future electronic systems.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Students -->
+  <h2>Students</h2>
+  <div class="member-grid">
+
+    <div class="member-card">
+      <img class="member-photo" src="assets/img/student1.jpg" alt="Student 1 photo">
+      <div class="member-info">
+        <div class="member-name">Student Name 1</div>
+        <div class="member-role">
+          PhD Student (started 2025)
+        </div>
+        <div class="member-email">
+          <a href="mailto:student1@university.edu">student1@university.edu</a>
+        </div>
+        <div class="member-intro">
+          Working on atomic-layer InOx and IGZO thin-film transistors, focusing on
+          reliability, trap physics, and high-performance access devices for displays
+          and micro-LED integration.
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img class="member-photo" src="assets/img/student2.jpg" alt="Student 2 photo">
+      <div class="member-info">
+        <div class="member-name">Student Name 2</div>
+        <div class="member-role">
+          PhD Student (started 2024)
+        </div>
+        <div class="member-email">
+          <a href="mailto:student2@university.edu">student2@university.edu</a>
+        </div>
+        <div class="member-intro">
+          Research interests include 2D tellurene devices, quantum transport,
+          and scaling theory of localization applied to realistic transistor
+          geometries and cryogenic electronics.
+        </div>
+      </div>
+    </div>
+
+    <div class="member-card">
+      <img class="member-photo" src="assets/img/student3.jpg" alt="Student 3 photo">
+      <div class="member-info">
+        <div class="member-name">Student Name 3</div>
+        <div class="member-role">
+          MSc / Honours Student
+        </div>
+        <div class="member-email">
+          <a href="mailto:student3@university.edu">student3@university.edu</a>
+        </div>
+        <div class="member-intro">
+          Working on device modeling and data analysis, developing compact models
+          and numerical tools to connect experimental measurements with physical
+          parameters such as disorder, mobility, and contact resistance.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Visitors / Alumni -->
+  <h2>Alumni & Visitors</h2>
+  <ul class="alumni-list">
+    <li><strong>Alumni Name 1</strong> – MSc student, now at Company / Institute (2022–2024)</li>
+    <li><strong>Alumni Name 2</strong> – Visiting PhD, University XYZ (6 months in 2023)</li>
+    <li><strong>Alumni Name 3</strong> – Research Assistant, now PhD at ABC University</li>
   </ul>
 
-  <h2>Students</h2>
-  <ul>
-    <li>Student 1</li>
-    <li>Student 2</li>
-    <li>Student 3</li>
-  </ul>
+</div>
+
+<footer>
+  © 2025 Your Research Group · YYY University
+</footer>
 
 </body>
 </html>
