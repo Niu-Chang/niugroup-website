@@ -4,51 +4,102 @@
   <meta charset="UTF-8">
   <title>Contact | Your Research Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #fafafa;
-      line-height: 1.6;
       color: #222;
+      line-height: 1.6;
     }
 
+    /* Header / Nav – same as other pages */
     header {
       background: white;
       border-bottom: 1px solid #ddd;
       padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
 
     .nav-container {
       max-width: 1000px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #004b8d;
     }
 
     nav a {
-      margin-left: 1.2rem;
+      margin-left: 1.5rem;
       text-decoration: none;
       color: #333;
+      font-size: 0.98rem;
     }
 
-    nav a:hover { color: #0072ce; }
+    nav a:hover {
+      color: #0072ce;
+    }
 
+    /* Layout */
     .section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    h1, h2 {
+      color: #004b8d;
+      margin-top: 0;
+    }
+
+    .contact-card {
       background: white;
-      padding: 2rem;
       border-radius: 10px;
       border: 1px solid #eee;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1.5rem 1.5rem 1.2rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
     }
 
-    h1 { color: #004b8d; }
+    .contact-row {
+      margin-bottom: 0.9rem;
+    }
 
-    .contact-item {
-      margin-bottom: 1.2rem;
+    .contact-label {
+      font-weight: 600;
+      color: #004b8d;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .map-box {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 1px dashed #c5d5ea;
+      background: #f4f7fb;
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .links-list a {
+      color: #0072ce;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+
+    .links-list a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -63,6 +114,7 @@
 
 <body>
 
+<!-- HEADER / NAV -->
 <header>
   <div class="nav-container">
     <div class="logo">Your Research Group</div>
@@ -76,34 +128,70 @@
   </div>
 </header>
 
+<!-- MAIN CONTENT -->
 <div class="section">
-  <h1>Contact Us</h1>
+  <h1>Contact</h1>
 
-  <div class="contact-item">
-    <strong>Principal Investigator:</strong><br>
-    Dr. Your Name  
-    <br>Email: <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+  <div class="contact-card">
+    <div class="contact-row">
+      <span class="contact-label">Principal Investigator</span>
+      Dr. Your Name<br>
+      Assistant Professor, Department of XXX<br>
+      YYY University
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">Email</span>
+      <a href="mailto:your.email@university.edu">your.email@university.edu</a>
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">Office</span>
+      Room ABC-123<br>
+      Building Name<br>
+      YYY University<br>
+      Singapore 119077
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">Lab Location</span>
+      Cleanroom / Lab Name<br>
+      Building XYZ, Level 3<br>
+      YYY University
+    </div>
+
+    <div class="contact-row">
+      <span class="contact-label">Online Profiles</span>
+      <div class="links-list">
+        <a href="https://scholar.google.com/citations?user=XXXX" target="_blank">Google Scholar</a>
+        <a href="https://orcid.org/0000-0000-0000-0000" target="_blank">ORCID</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="map-box">
+      <strong>How to find us</strong><br>
+      We are located in [Building Name] on the [Campus Name] campus.  
+      Visitors should first register at the main reception.  
+      For student or collaboration inquiries, please email in advance to arrange a meeting.
+    </div>
   </div>
 
-  <div class="contact-item">
-    <strong>Office:</strong><br>
-    Department of XXX<br>
-    YYY University<br>
-    Singapore 117583
+  <h2>Prospective Students & Collaborators</h2>
+  <div class="contact-card">
+    <div class="contact-row">
+      We welcome motivated students and collaborators with interests in
+      quantum electronics, oxide semiconductors, and advanced nano-devices.
+    </div>
+    <div class="contact-row">
+      <ul>
+        <li>For <strong>PhD / MSc positions</strong>, please include your CV, transcripts, and a short description of your research interests.</li>
+        <li>For <strong>visiting students / scholars</strong>, please mention your current institution, proposed period of stay, and funding source.</li>
+        <li>For <strong>industry or academic collaborations</strong>, feel free to reach out with a brief summary of your ideas or project.</li>
+      </ul>
+    </div>
   </div>
-
-  <div class="contact-item">
-    <strong>Lab Location:</strong><br>
-    Building ABC, Room 123  
-  </div>
-
-  <div class="contact-item">
-    <strong>Social / Links:</strong><br>
-    <a href="https://scholar.google.com">Google Scholar</a> ·
-    <a href="https://github.com/yourusername">GitHub</a> ·
-    <a href="https://linkedin.com">LinkedIn</a>
-  </div>
-
 </div>
 
 <footer>
