@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Research | Your Research Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header / Nav – same as other pages */
+    header {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #004b8d;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-size: 0.98rem;
+    }
+
+    nav a:hover {
+      color: #0072ce;
+    }
+
+    /* Layout */
+    .section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1rem 2rem;
+    }
+
+    h1, h2, h3 {
+      color: #004b8d;
+      margin-top: 0;
+    }
+
+    /* Top research direction index */
+    .dir-nav {
+      margin: 0.5rem 0 2rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #004b8d;
+    }
+
+    .dir-nav a {
+      color: #004b8d;
+      margin-right: 1.2rem;
+      text-decoration: none;
+    }
+
+    .dir-nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Research blocks */
+    .research-block {
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1.4rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .research-header {
+      margin-bottom: 0.5rem;
+    }
+
+    .research-tagline {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    .research-content {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .research-text {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .research-figure {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .research-figure img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      background: #eee;
+    }
+
+    @media (max-width: 800px) {
+      .research-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- HEADER / NAV -->
+<header>
+  <div class="nav-container">
+    <div class="logo">Your Research Group</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="members.html">Members</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<div class="section">
+  <h1>Research</h1>
+
+  <!-- Top index of directions -->
+  <div class="dir-nav">
+    <a href="#dir-quantum">Quantum Electronics & Transport</a> |
+    <a href="#dir-oxide">Oxide Semiconductors & Thin-Film Devices</a> |
+    <a href="#dir-m3d">Monolithic Integration & 3D Nanoelectronics</a> |
+    <a href="#dir-cryo">Cryogenic & Future Electronics</a>
+  </div>
+
+  <!-- Direction 1 -->
+  <a id="dir-quantum"></a>
+  <div class="research-block">
+    <div class="research-header">
+      <h2>Quantum Electronics & Transport</h2>
+      <div class="research-tagline">
+        Disorder, localization, and quantum Hall physics in nanoscale devices.
+      </div>
+    </div>
+
+    <div class="research-content">
+      <div class="research-text">
+        We study quantum transport phenomena in low-dimensional systems, including
+        2D semiconductors and oxide-based channels. By combining precise device
+        fabrication with low-temperature measurements, we explore localization,
+        quantum interference, and Landau quantization in realistic transistor
+        geometries.
+        <br><br>
+        Our work connects fundamental scaling theory, such as localization and
+        conductance scaling, with practical device metrics including mobility,
+        subthreshold slope, contact resistance, and long-term reliability.
+        Ultimately, we aim to understand how quantum and disorder effects
+        govern performance limits in future nanoscale electronics.
+      </div>
+
+      <div class="research-figure">
+        <img src="assets/img/research_quantum.jpg" alt="Quantum transport illustration">
+        <div>Illustration of quantum transport and conductance scaling in a 2D channel.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction 2 -->
+  <a id="dir-oxide"></a>
+  <div class="research-block">
+    <div class="research-header">
+      <h2>Oxide Semiconductors & Thin-Film Devices</h2>
+      <div class="research-tagline">
+        Atomic-layer oxides, IGZO, and high-mobility channels for robust electronics.
+      </div>
+    </div>
+
+    <div class="research-content">
+      <div class="research-text">
+        We develop and study oxide semiconductor thin films such as ALD-grown InOx
+        and IGZO for next-generation display backplanes, micro-LED drivers, and
+        backend-of-line compatible logic. Atomic layer deposition offers precise
+        thickness control and excellent uniformity, enabling large-area integration
+        on flexible and unconventional substrates.
+        <br><br>
+        Our research focuses on interface engineering, defect and trap physics, and
+        long-term stability under electrical and thermal stress. By combining process
+        optimization with device characterization, we aim to achieve high mobility,
+        low contact resistance, and excellent reliability in oxide thin-film
+        transistors.
+      </div>
+
+      <div class="research-figure">
+        <img src="assets/img/research_oxide.jpg" alt="Oxide TFT illustration">
+        <div>Schematic oxide TFT stack and large-area thin-film integration.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction 3 -->
+  <a id="dir-m3d"></a>
+  <div class="research-block">
+    <div class="research-header">
+      <h2>Monolithic Integration & 3D Nanoelectronics</h2>
+      <div class="research-tagline">
+        Stacking devices and materials for compact, heterogeneous systems.
+      </div>
+    </div>
+
+    <div class="research-content">
+      <div class="research-text">
+        Monolithic 3D integration allows multiple tiers of devices to be vertically
+        stacked on the same wafer, dramatically increasing functional density beyond
+        traditional planar scaling. We explore oxide, 2D, and other low-temperature
+        materials as add-on device layers compatible with CMOS back-end processes.
+        <br><br>
+        Our work includes the design and demonstration of stacked transistors,
+        integrated logic and memory elements, and driver circuits for applications
+        such as micro-LEDs, sensors, and cryo-compatible readout electronics.
+        We study thermal budgets, inter-tier coupling, and reliability of these
+        complex integrated systems.
+      </div>
+
+      <div class="research-figure">
+        <img src="assets/img/research_m3d.jpg" alt="3D integration illustration">
+        <div>Concept of vertically stacked device tiers for 3D nanoelectronics.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Direction 4 -->
+  <a id="dir-cryo"></a>
+  <div class="research-block">
+    <div class="research-header">
+      <h2>Cryogenic & Future Electronics</h2>
+      <div class="research-tagline">
+        Electronics that operate at extreme temperatures and interface with quantum systems.
+      </div>
+    </div>
+
+    <div class="research-content">
+      <div class="research-text">
+        Future computing systems will increasingly integrate classical control
+        electronics with quantum processors and sensors operating at cryogenic
+        temperatures. We investigate materials and device architectures that
+        maintain stable performance across a wide temperature range, from cryogenic
+        regimes to high-temperature operation.
+        <br><br>
+        By characterizing transport, noise, and reliability at low temperatures,
+        we aim to identify device concepts and material combinations that are
+        promising for cryo-CMOS, quantum control, and sensing front-ends, while
+        remaining compatible with large-scale integration.
+      </div>
+
+      <div class="research-figure">
+        <img src="assets/img/research_cryo.jpg" alt="Cryogenic electronics illustration">
+        <div>Illustrative cryogenic setup and electronics for quantum interfaces.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Your Research Group · YYY University
+</footer>
+
+</body>
+</html>
