@@ -100,22 +100,24 @@
     }
 
     .research-content {
-      display: grid;
-      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
-      gap: 1rem;
-      align-items: flex-start;
-    }
+  display: grid;
+  grid-template-columns: 2fr 1.3fr;
+  gap: 1rem;
+  align-items: start;   /* ensures picture aligns with heading */
+}
 
-    .research-text {
-      font-size: 0.95rem;
-      color: #333;
-    }
+.research-text h2 {
+  margin-top: 0;        /* removes unwanted top gap */
+}
 
-    .research-figure {
-      text-align: center;
-      font-size: 0.85rem;
-      color: #666;
-    }
+.research-figure img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
 
     .research-figure img {
       width: 100%;
@@ -174,6 +176,7 @@
   <!-- Direction 1 -->
   <a id="dir-quantum"></a>
   <div class="research-block">
+     <div class="research-content">
     <div class="research-header">
       <h2>Chiraltronics: Material, Transport, and Device</h2>
       <div class="research-tagline">
@@ -181,7 +184,7 @@
       </div>
     </div>
 
-    <div class="research-content">
+   
       <div class="research-text">
         Chiral quantum materials—those lacking inversion or mirror symmetry, are a rapidly emerging frontier in condensed matter physics due to their ability to host exotic quantum phenomena inaccessible in centrosymmetric systems. Their symmetry-breaking nature enables novel control over spin, charge, and heat transport, paving the way for energy-efficient logic, spintronics, and hybrid quantum technologies. 
         
