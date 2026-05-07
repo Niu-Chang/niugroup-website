@@ -1,61 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Publications | Niu's Research Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-.title-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-
-.title-row h1 {
-  margin: 0;
-  color: #004b8d;
-}
-
-.scholar-button {
-  display: inline-block;
-  background: #004b8d;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  white-space: nowrap; /* prevents wrapping */
-}
-
-.scholar-button:hover {
-  background: #0060bd;
-}
-
-    
-.year-nav {
-  margin: 1rem 0 2rem 0;
-  font-size: 1.3rem; /* increase this number to make even bigger */
-  font-weight: 700;
-  color: #004b8d;
-}
-
-.year-nav a {
-  color: #004b8d;
-  margin-right: 1.2rem;
-  text-decoration: none;
-}
-
-.year-nav a:hover {
-  text-decoration: underline;
-}
-
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #fafafa;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.35;
     }
 
     header {
@@ -74,12 +31,12 @@
       align-items: center;
       justify-content: space-between;
     }
-  .logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #004b8d;
-}
 
+    .logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #004b8d;
+    }
 
     nav a {
       margin-left: 1.5rem;
@@ -87,11 +44,13 @@
       color: #333;
     }
 
-    nav a:hover { color: #0072ce; }
+    nav a:hover {
+      color: #0072ce;
+    }
 
     .section {
       max-width: 1100px;
-      margin: 3rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
     }
 
@@ -99,93 +58,121 @@
       color: #004b8d;
     }
 
-    /* Google Scholar Button */
+    .title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .title-row h1 {
+      margin: 0;
+      color: #004b8d;
+    }
+
     .scholar-button {
       display: inline-block;
       background: #004b8d;
       color: white;
-      padding: 0.6rem 1.2rem;
+      padding: 0.45rem 0.9rem;
       border-radius: 6px;
       font-weight: 600;
-      margin-bottom: 1.2rem;
+      text-decoration: none;
+      white-space: nowrap;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
     }
+
     .scholar-button:hover {
       background: #0060bd;
+    }
+
+    .year-nav {
+      margin: 0.8rem 0 1.2rem 0;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #004b8d;
+    }
+
+    .year-nav a {
+      color: #004b8d;
+      margin-right: 1.1rem;
+      text-decoration: none;
+    }
+
+    .year-nav a:hover {
+      text-decoration: underline;
     }
 
     /* Publication list */
     .pub-list {
       list-style: none;
       padding-left: 0;
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
     .pub-year {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
       font-weight: 700;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
+      margin-top: 1.3rem;
+      margin-bottom: 0.4rem;
       color: #003d7c;
     }
 
     .pub-item {
       background: white;
-      padding: 1.2rem 1.5rem;
-      border-radius: 10px;
+      padding: 0.55rem 0.85rem;
+      border-radius: 7px;
       border: 1px solid #eee;
-      margin-bottom: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      margin-bottom: 0.45rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      line-height: 1.22;
     }
 
     .pub-title {
-      font-size: 1.05rem;
+      font-size: 0.92rem;
       font-weight: 600;
       color: #004b8d;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.12rem;
+      line-height: 1.22;
     }
 
     .pub-authors {
-      font-size: 0.95rem;
+      font-size: 0.82rem;
       font-style: italic;
       color: #444;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.08rem;
+      line-height: 1.2;
     }
 
     .pub-venue {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       color: #555;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.12rem;
+      line-height: 1.2;
+    }
+
+    .pub-links {
+      line-height: 1.1;
     }
 
     .pub-links a {
       color: #0072ce;
       font-weight: bold;
-      margin-right: 0.8rem;
+      margin-right: 0.55rem;
+      font-size: 0.76rem;
     }
 
     footer {
-      margin-top: 3rem;
+      margin-top: 2rem;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: #666;
     }
-
-ol li {
-  font-size: 0.88rem;
-  line-height: 1.25;
-  margin-bottom: 0.45rem;
-}
-
-ol li p {
-  margin: 0.1rem 0;
-  line-height: 1.25;
-}
-
-    
   </style>
 </head>
-
+  
 <body>
 
 <!-- NAVIGATION -->
