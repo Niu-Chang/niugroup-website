@@ -5,16 +5,15 @@
   <title>News | Niu's Research Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  
-<head>
   <style>
     body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #fafafa;
-  color: #333;
-}
-/* Nav (same as other pages) */
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fafafa;
+      color: #333;
+    }
+
+    /* Nav (same as other pages) */
     header {
       background: white;
       border-bottom: 1px solid #ddd;
@@ -49,108 +48,124 @@
       color: #0072ce;
     }
 
+    /* Layout */
+    .section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      line-height: 1.35;
+    }
 
-/* Layout */
-.section {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  line-height: 1.35;
-}
+    h1, h2 {
+      color: #004b8d;
+      margin-top: 0;
+      margin-bottom: 0.6rem;
+      line-height: 1.2;
+    }
 
-h1, h2 {
-  color: #004b8d;
-  margin-top: 0;
-  margin-bottom: 0.6rem;
-  line-height: 1.2;
-}
+    h3 {
+      color: #004b8d;
+      margin-top: 0.8rem;
+      margin-bottom: 0.35rem;
+      line-height: 1.2;
+    }
 
-h3 {
-  color: #004b8d;
-  margin-top: 0.8rem;
-  margin-bottom: 0.35rem;
-  line-height: 1.2;
-}
+    /* Top category navigation */
+    .category-nav {
+      margin: 0.3rem 0 1.2rem 0;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #004b8d;
+    }
 
-/* Top category navigation */
-.category-nav {
-  margin: 0.3rem 0 1.2rem 0;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #004b8d;
-}
+    .category-nav a {
+      color: #004b8d;
+      margin-right: 0.9rem;
+      text-decoration: none;
+    }
 
-.category-nav a {
-  color: #004b8d;
-  margin-right: 0.9rem;
-  text-decoration: none;
-}
+    .category-nav a:hover {
+      text-decoration: underline;
+    }
 
-.category-nav a:hover {
-  text-decoration: underline;
-}
+    /* Two-column layout */
+    .two-column-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
 
-/* Cards & lists */
-.item-list {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0.5rem;
-}
+    .column-section {
+      min-width: 0;
+    }
 
-.news-card,
-.event-card {
-  background: white;
-  padding: 0.55rem 0.85rem;
-  border-radius: 8px;
-  border: 1px solid #eee;
-  margin-bottom: 0.45rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
-  font-size: 0.9rem;
-  line-height: 1.32;
-}
+    @media (max-width: 800px) {
+      .two-column-layout {
+        grid-template-columns: 1fr;
+      }
+    }
 
-.item-date {
-  font-size: 0.78rem;
-  color: #666;
-  margin-bottom: 0.08rem;
-  line-height: 1.2;
-}
+    /* Cards & lists */
+    .item-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.5rem;
+    }
 
-.item-title {
-  font-weight: 600;
-  margin-bottom: 0.08rem;
-  color: #004b8d;
-  line-height: 1.25;
-}
+    .news-card,
+    .event-card {
+      background: white;
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      margin-bottom: 0.45rem;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      font-size: 0.9rem;
+      line-height: 1.32;
+    }
 
-.item-location {
-  font-size: 0.84rem;
-  color: #555;
-  line-height: 1.25;
-}
+    .item-date {
+      font-size: 0.78rem;
+      color: #666;
+      margin-bottom: 0.08rem;
+      line-height: 1.2;
+    }
 
-.tag {
-  display: inline-block;
-  font-size: 0.68rem;
-  padding: 0.08rem 0.35rem;
-  border-radius: 999px;
-  background: #e6f0fa;
-  color: #004b8d;
-  margin-right: 0.3rem;
-  margin-bottom: 0.1rem;
-  line-height: 1.2;
-}
+    .item-title {
+      font-weight: 600;
+      margin-bottom: 0.08rem;
+      color: #004b8d;
+      line-height: 1.25;
+    }
 
-footer {
-  margin-top: 2rem;
-  text-align: center;
-  padding: 0.7rem;
-  font-size: 0.82rem;
-  color: #666;
-}
-</style>
+    .item-location {
+      font-size: 0.84rem;
+      color: #555;
+      line-height: 1.25;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      padding: 0.08rem 0.35rem;
+      border-radius: 999px;
+      background: #e6f0fa;
+      color: #004b8d;
+      margin-right: 0.3rem;
+      margin-bottom: 0.1rem;
+      line-height: 1.2;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 0.7rem;
+      font-size: 0.82rem;
+      color: #666;
+    }
+  </style>
 </head>
-
 
 <body>
 
@@ -180,89 +195,97 @@ footer {
     <a href="#conferences">Conferences</a>
   </div>
 
-  <!-- NEWS SECTION -->
-  <a id="news"></a>
-  <h2>News</h2>
-  <ul class="item-list">
+  <div class="two-column-layout">
 
-    <li class="news-card">
-      <div class="item-date">09-03-2026</div>
-      <div class="item-title">
-        Research Lab Officially Established at NUS!
-      </div>
-      <div>
-        We are pleased to announce that our lab has officially launched at NUS.<br> 
-      </div>
-    </li>
-    
-    <li class="news-card">
-      <div class="item-date">15-12-2025</div>
-      <div class="item-title">
-        Welcome to the Quantum & Advanced Electronics Laboratory (QAEL)!
-      </div>
-      <div>
-        Dr. Chang Niu will join the Department of Electrical & Computer Engineering at the National University of Singapore (NUS) in 2026 as an Assistant Professor.<br> 
-      </div>
-    </li>
+    <!-- NEWS SECTION -->
+    <div class="column-section">
+      <a id="news"></a>
+      <h2>News</h2>
+      <ul class="item-list">
 
-  </ul>
+        <li class="news-card">
+          <div class="item-date">09-03-2026</div>
+          <div class="item-title">
+            Research Lab Officially Established at NUS!
+          </div>
+          <div>
+            We are pleased to announce that our lab has officially launched at NUS.<br> 
+          </div>
+        </li>
+        
+        <li class="news-card">
+          <div class="item-date">15-12-2025</div>
+          <div class="item-title">
+            Welcome to the Quantum & Advanced Electronics Laboratory (QAEL)!
+          </div>
+          <div>
+            Dr. Chang Niu will join the Department of Electrical & Computer Engineering at the National University of Singapore (NUS) in 2026 as an Assistant Professor.<br> 
+          </div>
+        </li>
 
-  <!-- TALKS / PRESENTATIONS SECTION -->
-  <a id="presentations"></a>
-  <h2>Invited Talks & Presentations</h2>
-  <ul class="item-list">
+      </ul>
+    </div>
 
-     <li class="event-card">
-      <div class="item-date">02-07-2025</div>
-      <div class="item-title">
-        Quantum and Topological Transport Phenomena in Chiral Semiconductors: Fundamentals and Device Integration
-      </div>
-      <div class="item-location">
-        <u><b>Chang Niu</b></u>, National University of Singapore, Singapore
-      </div>
-    </li>
-    
-    <li class="event-card">
-      <div class="item-date">17-03-2025</div>
-      <div class="item-title">
-        Fundamental Properties of 2D Tellurium Driven by its Chirality of Atomic Structure
-      </div>
-      <div class="item-location">
-        <u><b>Chang Niu</b></u>, and Peide D. Ye, American Physical Society (APS) Global Physics Summit, Anaheim, CA, USA
-      </div>
-    </li>
+    <!-- TALKS / PRESENTATIONS SECTION -->
+    <div class="column-section">
+      <a id="presentations"></a>
+      <h2>Invited Talks & Presentations</h2>
+      <ul class="item-list">
 
-    <li class="event-card">
-      <div class="item-date">16-12-2024</div>
-      <div class="item-title">
-        ALD-Based Nanometer-Thin Semiconducting Channel Material Transistors and Device Integrations
-      </div>
-      <div class="item-location">
-        <u><b>Chang Niu</b></u>, Texas Instruments, Santa Clara, CA, USA
-      </div>
-    </li>
+        <li class="event-card">
+          <div class="item-date">02-07-2025</div>
+          <div class="item-title">
+            Quantum and Topological Transport Phenomena in Chiral Semiconductors: Fundamentals and Device Integration
+          </div>
+          <div class="item-location">
+            <u><b>Chang Niu</b></u>, National University of Singapore, Singapore
+          </div>
+        </li>
+        
+        <li class="event-card">
+          <div class="item-date">17-03-2025</div>
+          <div class="item-title">
+            Fundamental Properties of 2D Tellurium Driven by its Chirality of Atomic Structure
+          </div>
+          <div class="item-location">
+            <u><b>Chang Niu</b></u>, and Peide D. Ye, American Physical Society (APS) Global Physics Summit, Anaheim, CA, USA
+          </div>
+        </li>
 
-    <li class="event-card">
-      <div class="item-date">27-11-2023</div>
-      <div class="item-title">
-        Chirality-Induced Quantum and Topological Properties in 2D Tellurium
-      </div>
-      <div class="item-location">
-        <u><b>Chang Niu</b></u>, and Peide D. Ye, Materials Research Society (MRS) Fall meeting, Boston, MA, USA
-      </div>
-    </li>
+        <li class="event-card">
+          <div class="item-date">16-12-2024</div>
+          <div class="item-title">
+            ALD-Based Nanometer-Thin Semiconducting Channel Material Transistors and Device Integrations
+          </div>
+          <div class="item-location">
+            <u><b>Chang Niu</b></u>, Texas Instruments, Santa Clara, CA, USA
+          </div>
+        </li>
 
-    <li class="event-card">
-      <div class="item-date">05-10-2022</div>
-      <div class="item-title">
-        Topologic Transport in Chiral Tellurium
-      </div>
-      <div class="item-location">
-        <u><b>Chang Niu</b></u>, National High Magnetic Field Lab (MAGLAB), Tallahassee, FL, USA
-      </div>
-    </li>
+        <li class="event-card">
+          <div class="item-date">27-11-2023</div>
+          <div class="item-title">
+            Chirality-Induced Quantum and Topological Properties in 2D Tellurium
+          </div>
+          <div class="item-location">
+            <u><b>Chang Niu</b></u>, and Peide D. Ye, Materials Research Society (MRS) Fall meeting, Boston, MA, USA
+          </div>
+        </li>
 
-  </ul>
+        <li class="event-card">
+          <div class="item-date">05-10-2022</div>
+          <div class="item-title">
+            Topologic Transport in Chiral Tellurium
+          </div>
+          <div class="item-location">
+            <u><b>Chang Niu</b></u>, National High Magnetic Field Lab (MAGLAB), Tallahassee, FL, USA
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
 
   <!-- CONFERENCES SECTION -->
   <a id="conferences"></a>
