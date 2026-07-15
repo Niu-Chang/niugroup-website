@@ -56,7 +56,8 @@
       padding: 0 1rem 2rem;
     }
 
-    h1, h2 {
+    h1,
+    h2 {
       color: #004b8d;
       margin-top: 0;
     }
@@ -74,11 +75,16 @@
       margin-top: 1rem;
     }
 
+    /* Two-column layout for postdocs and graduate students */
+    .member-grid.two-column {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .member-card {
       background: white;
       border-radius: 10px;
       border: 1px solid #eee;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
       padding: 1rem 1.2rem;
       display: flex;
       gap: 0.9rem;
@@ -146,119 +152,229 @@
       font-size: 0.9rem;
       color: #666;
     }
+
+    /* Responsive layout */
+    @media (max-width: 900px) {
+      .member-grid.two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      nav a {
+        margin-left: 0;
+        margin-right: 1rem;
+      }
+
+      .member-card {
+        flex-direction: column;
+      }
+
+      .member-photo {
+        width: 150px;
+        height: 150px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER / NAV -->
-<header>
-  <div class="nav-container">
-    <div class="logo">Niu's Research Group</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="research.html">Research</a>
-      <a href="members.html">Members</a>
-      <a href="publications.html">Publications</a>
-      <a href="news.html">News</a>
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Niu's Research Group</div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="members.html">Members</a>
+        <a href="publications.html">Publications</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <div class="section">
+
+    <!-- PI -->
+    <h2>Principal Investigator</h2>
+
+    <div class="member-grid">
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="assets/img/photo_ChangNiu.jpg"
+          alt="PI photo"
+        >
+
+        <div class="member-info">
+          <div class="member-name">Dr. Niu, Chang</div>
+
+          <div class="member-role">
+            Assistant Professor, Department of Electrical and Computer
+            Engineering, National University of Singapore (NUS)
+          </div>
+
+          <div class="member-email">
+            <b>Office:</b> E4-08-15
+            &nbsp;&nbsp;&nbsp;
+            <b>Email:</b>
+            <a href="mailto:changniu@nus.edu.sg">changniu@nus.edu.sg</a>
+          </div>
+
+          <div class="member-intro">
+            <b>Experiences:</b><br>
+
+            Assistant Professor |
+            National University of Singapore |
+            2026-present<br>
+
+            Postdoctoral Scholar |
+            Purdue University |
+            2025-2026<br>
+
+            Postdoctoral Scholar |
+            imec |
+            2024-2025<br>
+
+            <b>Education:</b><br>
+
+            Ph.D in Electrical Engineering |
+            Purdue University, USA |
+            2018-2024 |
+            Prof. Peide D. Ye<br>
+
+            B. Sc in Physics |
+            Fudan University, China |
+            2014-2018<br>
+
+            <b>Research Interest:</b><br>
+
+            Quantum Transport in Chiral Materials, Emerging Electronic
+            Devices, Oxide Semiconductors<br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Postdocs -->
+    <h2>Postdoctoral Researchers</h2>
+
+    <div class="member-grid two-column">
+
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="assets/img/photo_Qianwen Guo.jpg"
+          alt="Postdoc 1 photo"
+        >
+
+        <div class="member-info">
+          <div class="member-name">Dr. Guo, Qianwen</div>
+
+          <div class="member-role">
+            Postdoctoral Researcher (Joined August 2026)
+          </div>
+
+          <div class="member-email">
+            <a href="mailto:postdoc1@university.edu">
+              ******@nus.edu.sg
+            </a>
+          </div>
+
+          <div class="member-intro">
+            <b>Education:</b>
+            Ph.D in Integrated Circuit Engineering, Zhejiang University,
+            Hangzhou, China<br>
+
+            <b>Research focus:</b>
+            Advanced Semiconductor Characterization.<br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Students -->
+    <h2>Graduate Students</h2>
+
+    <div class="member-grid two-column">
+
+      <div class="member-card">
+        <img
+          class="member-photo"
+          src="assets/img/student1.jpg"
+          alt="Student 1 photo"
+        >
+
+        <div class="member-info">
+          <div class="member-name">Mr. Wang, Congjie</div>
+
+          <div class="member-role">
+            PhD Student (started August 2026)
+          </div>
+
+          <div class="member-email">
+            <a href="mailto:student1@university.edu">
+              *******@nus.edu.sg
+            </a>
+          </div>
+
+          <div class="member-intro">
+            <b>Education:</b>
+            M.S in Electrical Engineering, University of Pennsylvania,
+            PA, USA<br>
+
+            <b>Research focus:</b>
+            Semiconductor Devices and Characterizations.<br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>
+      PhD / MSc / Postdoc Positions Open see
       <a href="contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
+    </h2>
 
-<!-- MAIN CONTENT
-  <h1>Group Members</h1>-->
-<div class="section">
-  
+    <!--
+    Visitors / Alumni
 
-  <!-- PI -->
-  <h2>Principal Investigator</h2>
-  <div class="member-grid">
-    <div class="member-card">
-      <img class="member-photo" src="assets/img/photo_ChangNiu.jpg" alt="PI photo">
-      <div class="member-info">
-        <div class="member-name">Dr. Niu, Chang</div>
-        <div class="member-role">Assistant Professor, Department of Electrical and Computer Engineering, National University of Singapore (NUS)
-          
-        </div>
-        <div class="member-email">
-          <b>Office:</b> E4-08-15 &nbsp;&nbsp;&nbsp; <b>Email:</b> <a href="mailto: changniu@nus.edu.sg">changniu@nus.edu.sg</a>
-        </div>
-        <div class="member-intro">
-          <b>Experiences:</b><br>
-          Assistant Professor   |   National University of Singapore   |   2026-present<br>
-          Postdoctoral Scholar   |   Purdue University   |   2025-2026<br>
-          Postdoctoral Scholar    |  imec     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          |    2024-2025<br>
-          <b>Education:</b><br>
-          Ph.D in Electrical Engineering  |   Purdue University, USA&nbsp; |   2018-2024 | &nbsp;&nbsp;&nbsp; Prof. Peide D. Ye <br>
-          B. Sc in Physics  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  | Fudan University, China   |   2014-2018<br>
-          <b>Research Interest:</b><br>
-          Quantum Transport in Chiral Materials, Emerging Electronic Devices, Oxide Semiconductors<br>
-        </div>
-      </div>
-    </div>
-  </div>
+    <h2>Alumni & Visitors</h2>
 
-<!-- Postdocs -->
-<h2>Postdoctoral Researchers</h2>
-<div class="member-grid">
+    <ul class="alumni-list">
+      <li>
+        <strong>Alumni Name 1</strong> – MSc student, now at Company /
+        Institute (2022–2024)
+      </li>
 
-  <div class="member-card">
-    <img class="member-photo" src="assets/img/photo_Qianwen Guo.jpg" alt="Postdoc 1 photo">
-    <div class="member-info">
-      <div class="member-name">Dr. Guo, Qianwen</div>
-      <div class="member-role">
-        Postdoctoral Researcher (Joined August 2026)
-      </div>
-      <div class="member-email">
-        <a href="mailto:postdoc1@university.edu">******@nus.edu.sg</a>
-      </div>
-      <div class="member-intro">
-        <b>Education:</b> Ph.D in Integrated Circuit Engineering, Zhejiang University, Hangzhou, China<br>
-        <b>Research focus:</b> Advanced Semiconductor Characterization. <br>
-      </div>
-    </div>
-  </div>
+      <li>
+        <strong>Alumni Name 2</strong> – Visiting PhD, University XYZ
+        (6 months in 2023)
+      </li>
 
-
-</div>
-
-  <!-- Students -->
-  <h2>Graduate Students</h2>
-  <div class="member-grid">
-
-    <div class="member-card">
-      <img class="member-photo" src="assets/img/student1.jpg" alt="Student 1 photo">
-      <div class="member-info">
-        <div class="member-name">Mr. Wang, Congjie</div>
-        <div class="member-role">
-          PhD Student (started August 2026)
-        </div>
-        <div class="member-email">
-          <a href="mailto:student1@university.edu">*******@nus.edu.sg</a>
-        </div>
-        <div class="member-intro">
-        <b>Education:</b> M.S in Electrical Engineering, University of Pennsylvania, PA, USA<br>
-        <b>Research focus:</b> Semiconductor Devices and Characterizations. <br>
-        </div>
-      </div>
-    </div>
+      <li>
+        <strong>Alumni Name 3</strong> – Research Assistant, now PhD at
+        ABC University
+      </li>
+    </ul>
+    -->
 
   </div>
-  <h2>PhD / MSc / Postdoc Positions Open see <a href="contact.html">Contact</a></h2>
-  <!-- Visitors / Alumni 
-  <h2>Alumni & Visitors</h2>
-  <ul class="alumni-list">
-    <li><strong>Alumni Name 1</strong> – MSc student, now at Company / Institute (2022–2024)</li>
-    <li><strong>Alumni Name 2</strong> – Visiting PhD, University XYZ (6 months in 2023)</li>
-    <li><strong>Alumni Name 3</strong> – Research Assistant, now PhD at ABC University</li>
-  </ul>
 
-</div>-->
-
-<footer>
-© 2025 Niu's Research Group · National University of Singapore (NUS)
-</footer>
+  <footer>
+    © 2025 Niu's Research Group · National University of Singapore (NUS)
+  </footer>
 
 </body>
 </html>
